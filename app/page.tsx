@@ -1,3 +1,18 @@
+"use client";
+
+import Live from "@/components/Live";
+import { useRedo, useUndo } from "@/liveblocks.config";
+import { useRef } from "react";
+
 export default function Page() {
-  return <h1 className="text-white text-xl">Gokul</h1>;
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+  const undo = useUndo();
+  const redo = useRedo();
+  return (
+    <>
+      <div>
+        <Live canvasRef={canvasRef} undo={undo} redo={redo} />
+      </div>
+    </>
+  );
 }

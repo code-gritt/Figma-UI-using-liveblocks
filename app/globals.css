@@ -8,6 +8,21 @@
   font-family: work sans, sans-serif;
 }
 
+.fade {
+  animation: 1s fadeIn;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
 @layer utilities {
   .no-ring {
     @apply outline-none ring-0 ring-offset-0 focus:ring-0 focus:ring-offset-0 focus-visible:ring-offset-0 !important;
