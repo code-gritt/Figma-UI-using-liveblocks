@@ -1,10 +1,3 @@
-import { CollaborativeApp } from "./CollaborativeApp";
-import Room from "./Room";
-
 export default function Page() {
-  return (
-    <Room>
-      <CollaborativeApp />
-    </Room>
-  );
+  return <h1 className="text-white text-xl">Gokul</h1>;
 }
